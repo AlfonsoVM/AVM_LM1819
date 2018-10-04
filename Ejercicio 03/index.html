@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+</head>
+<body>  <!--Collapse hace que tenga menos bordes--> <!--Groups separa thead, tbody y tfoot con líneas-->
+    <table style="border: 1px solid skyblue; border-collapse: collapse" rules="groups">
+        <!--Fila-->
+        <caption>Horario Semanal</caption>
+        <thead>
+            <tr>
+                    <th></th>">Lunes</th>
+                    <th style="border: 2px solid greenyellow">Martes</th>
+                    <th>Miércoles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2" style="border: 1px splid black">1</td>
+                <td colspan="2" style="border: 1px solid purple">2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>200</td>
+            <td>4500</td>
+            <td>9001</td>
+        </tfoot>
+        <tr>
+            <th style="border: 2px solid orange">Lunes</th>
+            <th style="border: 2px solid greenyellow">Martes</th>
+            <th style="border: 2px solid purple">Miércoles</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td><table style="border: 1px solid skyblue"; padding: 55 px; margin: 60px> ESTO TA MAL
+                    <!--Fila-->
+                    <caption>Horario Semanal</caption>
+                    <thead>
+                        <tr>
+                                <th style="border: 2px solid orange">Lunes</th>
+                                <th style="border: 2px solid greenyellow">Martes</th>
+                                <th>Miércoles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="border: 1px splid black">1</td>
+                            <td colspan="2" style="border: 1px solid purple">2</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td>200</td>
+                        <td>4500</td>
+                        <td>9001</td>
+                    </tfoot>
+                    <tr>
+                        <th style="border: 2px solid orange">Lunes</th>
+                        <th style="border: 2px solid greenyellow">Martes</th>
+                        <th style="border: 2px solid purple">Miércoles</th>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</body>
+</html>

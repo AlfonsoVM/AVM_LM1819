@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capas</title>
+</head>
+<body>
+    <div style="width: 100px; height: 100px; background:red; position: absolute; top: 10 px; left: 10px; z-index: 1">Rojo</div> <!--Z-INDEX-->
+    <div style="width: 100px; height: 100px; background: green; position: absolute; top: 20px; left: 20px; z-index: 2">Verde</div>
+    <div style="width: 100px; height: 100px; background:blue; position: absolute; top: 30px; left: 30px; z-index: 3">Azul</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+    <span style="font-family: Arial, Helvetica, sans-serif">Cualquiera</span>
+    <div style="width: 100px; height: 100px; background:red; display: none">Primera</div> <!--DISPLAY NONE!!!!!!!!-->
+    <div style="width: 100px; height: 100px; background:blue; position: relative; top: 20px; left: 20px; display: inline-block">Segunda</div>
+
+    <div style="width: 300px; height: 300px; background: sienna; position: relative; top: 50px; ">Caja</div>
+        <div style="background: yellow; position: relative; top: 10px; left: 10px; width: 70px; height: 70px">Capa Interna</div>
+
+    <div style="background: green; width: 50px; height: 50px; position: absolute; top: 20px; left: 20px; ">Capa absoluta</div> <!--Esta debajo de otros cajones(Z-INDEX)-->
+    
+    <div style="background: gray; width: 150px; height: 150px; position: fixed; top: 0px; right: 0px">Capa fixed</div>
+
+    <div style="background: lawngreen; width: 150px; height: 150px; margin: 0px auto">Capa centrada</div>
+    <div style="background: lawngreen; width: 150px; height: 150px; margin-left: auto; margin-right: auto">Capa centrada</div>
+
+    <hr/>
+
+    <div style="background: indigo; width: 150px; height: 150px; float: left">Uno</div>
+    <div style="background: greenyellow; width: 150px; height: 150px; float: left">Dos</div>
+
+    <div style="background: blue; width: 350px; height: 350px; overflow: scroll">
+        <img src="hashtag.gif" alt="Google I/O" style="width: 250px; height: 150px; float: right">
+        Esto es una imagen de Google. Esto es una imagen de Google. Esto es una imagen de Google. Esto es una imagen de Google. 
+        Esto es una imagen de Google. Esto es una imagen de Google. Esto es una imagen de Google. Esto es una imagen de Google. 
+        Esto es una imagen de Google. Esto es una imagen de Google. Esto es una imagen de Google. Esto es el final.
+        Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final.
+        Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final.
+        Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final.
+        Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final. Esto es el final.
+    </div>
+
+    <div style="width: 100px; height: 100px; background:red; float: left">Rojo</div>
+    <div style="width: 100px; height: 100px; background:green; float: left">Verde</div>
+    <div style="width: 100px; height: 100px; background: blue; clear: both; border: dashed; border-color: green; border-top: 2px solid magenta">Azul</div> <!--border-width: 4px-->
+<br><br><br><br><br><br><br><br>
+    <div style="width: 100px; height: 100px; background: rgb(89, 205, 251); clear: both; border: 4px solid yellow; border-radius: 10px 0px 40px 20px; box-shadow: 10px 0px 40px 20px black">Azul</div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

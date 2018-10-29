@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index5</title>
+</head>
+<body>
+                                    <!--method="get Ó post"--> <!--Con get la información de formulario se veria la en la url-->
+    <form action="gestiondatos.jsp" method="POST" name="" id="">
+        <fieldset>
+            <legend>Datos Usuario</legend>
+                                <!--Texto de prueba-->                  <!--Texto de fondo-->
+        <label for="nombre">Nombre de Usuario: </label><input type="text" 
+            value="Defecto" name="nombre" id="nombre" placeholder="Nombre de usuario"
+            size="100" maxlenght="20" pattern="[A-Z]{5}[0-9]{3}"   />
+                                    <!--Requisitos de un campo--><!--5 Letras mayusculas de la A a la Z y .....-->
+        <br/>
+            <input type="password" name="pass"  />
+        <br/>
+        <label for="pregunta">¿Es usted alumno del centro?</label>
+            <input type="radio" name="pregunta" value="Sí" value="S" checked="checked"    />Sí
+            <input type="radio" name="pregunta" value="No" value="N"    />No
+        <br/>
+            <label>Aficiones</label><br/>
+                <input type="checkbox" name="futbol" value="f"  />Fútbol
+                <input type="checkbox" name="cine" value="c"    />Cine
+        <br/>
+
+                <label for="provincias"></label>
+                    <select name="provincias" id="provincias">
+                        <optgroup label="Unos">
+                            <option value="SE">Sevilla</option>
+                        </optgroup>
+                        <optgroup label="Dos">
+                            <option value="CA">Cádiz</option>
+                            <option value="HU">Huelva</option>
+                        </optgroup>
+                    </select>
+        
+        <br/>
+
+            <input type="file" name="archivo"   />
+
+        <br/>
+
+            <textarea name="descripcion" rows="10" cols="10" maxlenght="20">
+
+
+            </textarea>
+
+        <br/>
+
+            <input type="submit" value="Enviar" />
+        <br/>
+            <input type="reset" value="Borrar"  />
+        <br/>
+            <input type="button" name="boton" value="Pulsar" />
+        </fieldset>
+
+        <br/>
+    </form>
+    <form>
+        <fieldset>
+                Number:<input type="number" min="1" max="10" required="required"    />
+                Time:<input type="time" />
+                Datetime:<input type="datetime"     />
+                Datetime-local:<input type="datetime-local"  />
+                Month:<input type="month"       />
+                Date:<input type="date"    />
+                URL:<input type="url"       />
+                Email:<input type="email" readonly="readonly"    />
+                Search:<input type="search">
+                Range:<input type="range" min="0" max="100" step="5"      />
+                Telephone:<input type="tel"     />
+                Color: <input type="color"      />
+                <input type="submit"    />
+        </fieldset>
+    </form>
+</body>
+</html>

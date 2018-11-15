@@ -4,33 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulario de prueba</title>
+    <title>Ejercicio05_formulario01</title>
 </head>
 <body>
-    <form action="gestiondatos.jsp" method="GET" action=""></form>
+    <form action="gestiondatos.jsp" method="GET"></form>
         <fieldset>
-            <legend>Formulario</legend>
-            <label for="nombre">Nombre: </label><input type="text" size="100" name="nombre" id="nombre"
-                placeholder="Solo se permiten caracteres del abecedario" required="required" pattern="[a-Z]"/> (Campo obligatorio)
-               
-                <br>
-
-            Correo electrónico: <input type="email"/><br><br>
-            
-            URL: <input type="url" placeholder="Escribe la URL de tu página web personal" size="40"/><br><br>
-
-            Fecha: <input type="date" /><br><br>  Tiempo: <input type="time"/><br><br> Fecha y Hora: <input type="datetime"/><br><br>
-                Mes: <input type="month"/><br><br>  Semana: <input type="week"/><br><br>
-
-            Número: <input type="number" min="-10" max="10"/><br><br>
-            
-            Teléfono: <input type="tel"/><br><br>
-
-            Búsqueda: <input type="search"/><br><br>
-
-            Color Favorito: <input type="color"/><br><br>
-
-            <input type="submit" value="Enviar" >
+        <legend>Formulario Experimental 1</legend>
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre: </label><input type="text" size="40" name="nombre" id="nombre"
+                        placeholder="Solo se permiten caracteres del abecedario" required="required" pattern="[a-Z]" autofocus="autofocus"/></td>
+                    <td>(Campo obligatorio)</td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico:</td>
+                    <td><input type="email"/></td>
+                </tr>
+                <tr>
+                    <td>URL:</td>
+                    <td><input type="url" placeholder="Escribe la URL de tu página web personal" size="40"/></td>
+                </tr>
+                <tr>
+                    <td>Fecha:</td>
+                    <td><input type="date" /><br><br>  Tiempo: <input type="time"/><br><br> Fecha y Hora: <input type="datetime"/></td>
+                </tr>
+                <tr>
+                    <td>Mes:</td>
+                    <td><input type="month"/></td>
+                </tr>
+                <tr>
+                    <td>Semana:</td>
+                    <td><input type="week"/></td>
+                </tr>
+                <tr>
+                    <td>Número:</td>
+                    <td><input type="number" min="-10" max="10"/></td>
+                </tr>
+                <tr>
+                    <td>Teléfono:</td>
+                    <td><input type="tel"/></td>
+                </tr>
+                <tr>
+                    <td>Búsqueda:</td>
+                    <td><input type="search"/></td>
+                </tr>
+                <tr>
+                    <td>Color Favorito:</td>
+                    <td><input type="search"/></td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td><input type="color"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Enviar" ></td>
+                </tr>
+            </table>
         </fieldset>
 </body>
 </html>

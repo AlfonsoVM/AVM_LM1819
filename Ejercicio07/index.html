@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Multimedia y otros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        @media only screen and (max-width:1920px) and (min-width:640px) {
+            body {
+                background: blue;
+            }
+        }
+        @media only screen and (max-width: 794px) and (min-width: 320px) {
+            body {
+                background: red;
+            }
+        }
+        @media print {
+            * {
+                font-family: "Comic Sans MS", cursive, sans-serif
+            }
+        }
+        @media all and (orientation:portrait) {
+
+        }
+        @media all and (orientation:landscape) {
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>VIDEO</h1>
+    <video width="640" height="360" controls autoplay loop muted preload="auto" poster=""> <!--Poster es la imágen previa a la reproducción del video-->
+        <source src="Rubik's Cube World Record - 4.22 seconds.mp4"> <!--"/> type="video/mp4; codecs='avc1.42E01E'--> <!--CODECS-->
+        <p>Tu navegador no soporta HTML5</p>
+    </video>
+
+    <h1>AUDIO</h1>
+    <audio controls  >
+        <source src="iPhone_X_Ringtone_Reflection.mp3">
+    </audio>
+
+    <h1>IFRAME</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d938646.099309893!2d-98.67445664232467!3d58.11504779206049!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x525d3e1c8cf1057d%3A0x3894f5a6e00235da!2sSand+Lakes+Provincial+Wilderness+Park!5e0!3m2!1ses!2ses!4v1543235607750" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <h1>OBJECT</h1>
+    <object style="width: 640px; height: 360px" data="test.swf" type="application/x-shockwave-flash">
+        <param name="movie" value="test.swf"/>
+        <param name="quality" value="high"/>
+        <param name="wmode" value="transparent"/>
+    </object>
+ </body>
+</html>

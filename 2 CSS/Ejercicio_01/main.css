@@ -14,14 +14,15 @@ body {
 nav {
     background-color: #a7cfe6;
     color: #8096a3;
-    border-color: #97bfd6;
-    border: solid 1px;
-    padding: 5px 15px;
+    padding: 5px 10px;
+    border: 2px solid #97bfd6;
 }
 #nav li {
     display: inline-block;
     list-style: none;
     padding: 5px;
+    border-right;
+    border: 1px solid #97bfd6
 }
 header, section, footer, aside, nav, article {
     display: block;

@@ -39,7 +39,25 @@ div > a {
     font-style: italic;
 }
 
-.capa2 {
+div.capa2 {
     border: 1px solid black;
 
 }
+
+a [href^="https"] {
+    color: orange;
+}
+
+a [href$="pdf"] {
+    color: green;
+}
+
+p[align="center"] {
+    background: blue;
+}
+
+div + p {
+    font-size: 50px;
+}
+
+

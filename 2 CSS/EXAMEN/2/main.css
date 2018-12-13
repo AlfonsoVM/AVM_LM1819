@@ -1,0 +1,21 @@
+p, span, h1 {
+    font-weight: bold;
+}
+#primera {
+    background:blue;
+}
+#segunda > p {
+    font-style: italic;
+}
+#primerp::first-letter{
+    font-size: 30px;
+}
+#segundop:hover {
+    font-size: 30px;
+}
+#enlaces1 a {
+    color: red;
+}
+#enlaces1 [href$=".com"] {
+    text-decoration: none;
+}

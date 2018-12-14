@@ -4,6 +4,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #container {
+    width: 1280px;
     margin: 30px;
     text-align: left;
     border: solid 4px black;
@@ -28,20 +29,22 @@ body {
     border-right: 1px solid #97bfd6;
     color: #6d97af;
 }
-article {
-    width: 900px;
+#articulo1 {
+    width: 800px;
     height: 600px;
     background-color: #ffba90;
+    float: left;
 }
 #section1 {
+    height: 650px;
     padding: 25px;
     background: #fff8c0;
 }
 #column {
-    width: 350px;
+    float: right;
+    width: 250px;
     height: 600px;
     background: #b3aca8;
-    float: left
 }
 #articleheader {
     padding: 6px;

@@ -135,7 +135,8 @@
         print_r(get_defined_constants());
         print "</pre>";
 
-        
+        $maximo = PHP_INT_MAX;
+        echo $maximo;
 
     ?>
 </body>

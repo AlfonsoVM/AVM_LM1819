@@ -10,7 +10,7 @@
     <?php
         $numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         $numerorand = $numeros[array_rand($numeros)];
-        echo $numerorand;
+        echo "El valor aleatorio es: $numerorand";
         
         if ($numerorand < 5) {
             echo "<p style=color:red>El valor $numerorand es menor que 5</p>";

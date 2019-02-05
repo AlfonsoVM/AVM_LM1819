@@ -97,9 +97,6 @@
     else if ($n2+$n3 == $n1) {
         echo "$n2 + $n3 = $n1";
     }
-    else if ($n1+$n3 == $n2) {
-        echo "$n1 + $n3 = $n2";
-    }
     ?>
 </body>
 </html>

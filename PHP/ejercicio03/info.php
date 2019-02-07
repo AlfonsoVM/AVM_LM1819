@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    for ($multiplicando=1; $i <= 10; $i++) {
+    for ($multiplicando=1; $multiplicando <= 10; $multiplicando++) {
         echo "<table>";
         echo "<tr><td>Tabla del $multiplicando</td></tr>";
         $multiplicador=1;

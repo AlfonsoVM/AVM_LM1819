@@ -9,15 +9,18 @@
 <body>
     <?php
     for ($multiplicando=1; $multiplicando <= 10; $multiplicando++) {
+        echo "<div>";
         echo "<table>";
         echo "<tr><td>Tabla del $multiplicando</td></tr>";
         $multiplicador=1;
-        while ($multiplicador <= 10) {
+        while ($multiplicador < 10) {
             $resultado=0;
+            $multiplicador=$multiplicador+1;
             $resultado=($multiplicador*$multiplicando);
             echo "<tr><td>$multiplicando x $multiplicador = $resultado</td></tr>";
         }   
         echo "</table>";
+        echo "</div>";
     }
     ?>
 </body>

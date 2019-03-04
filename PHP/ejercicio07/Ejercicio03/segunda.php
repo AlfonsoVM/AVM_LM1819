@@ -1,8 +1,14 @@
 <?php
-$nombre = $nombre = trim(htmlspecialchars($_REQUEST["email"], ENT_QUOTES, "UTF-8"));
+$nombre = $nombre = trim(htmlspecialchars($_REQUEST['nombre'], ENT_QUOTES, 'UTF-8'));
 
 session_start();
 $_SESSION['nombreWeb'] = $nombre;
 
-header('Location: tercera.php');
+if (isset($_COOKIE['nombrechk'])) {
+    echo "Hola $_COOKIE[nombreUsu]";
+} else {
+    echo "Hola Anónimo";
+}
+
+header('Location: primera.php');
 ?>

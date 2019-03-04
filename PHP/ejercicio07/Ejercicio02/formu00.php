@@ -6,7 +6,7 @@
     <title>color00</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="background-color:"
+<body style="background-color:
     <?php
         if (isset($_COOKIE['color'])) {
             echo $_COOKIE['color'];

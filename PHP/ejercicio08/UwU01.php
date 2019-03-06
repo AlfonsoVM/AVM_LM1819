@@ -13,8 +13,8 @@
     $cpass = trim(htmlspecialchars($_REQUEST["cpass"], ENT_QUOTES, "UTF-8"));
     
     session_start();
-    $_SESSION['nombreuser'] = $user;
-
+    $_SESSION['sessionuser'] = $user;
+    
     if (isset($_REQUEST['recordar'])) {
         setcookie("nameuser", $user, time()+60*60*24*365);
     } else {

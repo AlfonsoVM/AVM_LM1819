@@ -11,7 +11,7 @@
         <table>
             <tr>
                 <td><p><label for="user">User: </label></p></td>
-                <td><p>
+                <td>
                     <input type="text" name="user" id="user" 
                     value="
                     <?php
@@ -20,7 +20,7 @@
                         }
                     ?>
                     "/>
-                </p></td>
+                </td>
             </tr>
             <tr>
                 <td><p><label for="pass">Password: </label></p></td>
@@ -37,7 +37,7 @@
                 </p></td>
             </tr>   
             <tr>
-                <td><p><label for="recordar">¿Recordar Email? </label></p></td>
+                <td><p><label for="recordar">¿Recordar User? </label></p></td>
                 <td><p><input type="checkbox" name="recordar" id="recordar" value="1"/></p></td>
             </tr>
             <tr>

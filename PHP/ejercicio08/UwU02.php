@@ -9,9 +9,7 @@
 <body>
     <p>
         <?php
-            $user = trim(htmlspecialchars($_REQUEST["user"], ENT_QUOTES, "UTF-8"));
-            $date = trim(htmlspecialchars($_REQUEST["date"], ENT_QUOTES, "UTF-8"));
-
+            $date = trim(htmlspecialchars($_REQUEST["fecha"], ENT_QUOTES, "UTF-8"));
 
             if (isset($_REQUEST['recordarf'])) {
                 setcookie("namedate", $date, time()+60*60*24*365);
@@ -19,8 +17,12 @@
                 setcookie("namedate", $date, time()-1000);
             }
 
-            echo "Hola $user";
-            echo "Tu edad"
+            session_start();
+            print "Hola " . $_SESSION['nombreuser'];
+
+            
+
+            echo "<p>Tu edad es: </p>";
         ?>
     </p>
     <p><a href="UwU01.php">Volver</a></p>

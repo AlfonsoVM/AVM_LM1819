@@ -11,6 +11,9 @@
     $user = trim(htmlspecialchars($_REQUEST["user"], ENT_QUOTES, "UTF-8"));
     $pass = trim(htmlspecialchars($_REQUEST["pass"], ENT_QUOTES, "UTF-8"));
     $cpass = trim(htmlspecialchars($_REQUEST["cpass"], ENT_QUOTES, "UTF-8"));
+    
+    session_start();
+    $_SESSION['nombreuser'] = $user;
 
     if (isset($_REQUEST['recordar'])) {
         setcookie("nameuser", $user, time()+60*60*24*365);
@@ -25,15 +28,16 @@
             <table>
                 <tr>
                     <td><p>
+                        <label for='fecha'>Fecha de nacimiento: </label>
                         <input type='date' name='fecha' id='fecha'>
                     </p></td>
                 </tr>
-                <!--<tr>
+                <tr>
                     <td><p>
                         <label for='recordarf'>¿Recordar Fecha?</label>
                         <input type='checkbox' name='recordarf' id='recordarf' value='1'/>
                     </p></td>
-                </tr>-->
+                </tr>
                 <tr>
                     <td><p>
                         <input type='submit' value='Enviar'/>

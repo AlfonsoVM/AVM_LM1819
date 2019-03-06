@@ -18,9 +18,7 @@
             }
 
             session_start();
-            print "Hola " . $_SESSION['nombreuser'];
-
-            
+            print "Hola " . $_SESSION['sessionuser'];
 
             echo "<p>Tu edad es: </p>";
         ?>

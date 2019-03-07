@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <p>
+    <div align='center'>
         <?php
             $date = trim(htmlspecialchars($_REQUEST["fecha"], ENT_QUOTES, "UTF-8"));
 
@@ -17,13 +17,28 @@
                 setcookie("namedate", $date, time()-1000);
             }
 
+            print "<table>";
+            print "<tr><td>";
             session_start();
             print "Hola " . $_SESSION['sessionuser'];
+            print "</td></tr>";
+            print "<tr><td>Fecha de Nacimiento: $_REQUEST[fecha]</td></tr>";
+            print "<tr><td>Fecha Actual: " . date('Y-m-d') . "</td></tr>";
 
-            echo "<p>Tu edad es: </p>";
+            list($year, $month, $day) = explode("-", $_REQUEST['fecha']);
+            $year_diff = date ("Y") - $year;
+            $month_diff = date ("m") - $month;
+            $day_diff = date ("d") - $day;
+            if ($month_diff < 0 || ($day_diff < 0 && $month_diff = 0)) {
+                $year_diff--;
+            }
+
+            print "<tr><td>Tu edad es: $year_diff</td></tr>";
+            print "</table>";
         ?>
-    </p>
-    <p><a href="UwU01.php">Volver</a></p>
-    <p><a href="UwU00.php">Volver al inicio</a></p>
+    </div>
+    <br/><br/><br/><br/><br/>
+    <p align='center'><a href="UwU01.php">Volver</a></p>
+    <p align='center'><a href="UwU00.php">Volver al inicio</a></p>
 </body>
 </html>

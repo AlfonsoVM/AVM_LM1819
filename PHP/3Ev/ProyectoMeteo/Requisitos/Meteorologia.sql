@@ -24,8 +24,8 @@ Codigo VARCHAR(45) NOT NULL,
 Marca VARCHAR(45) NOT NULL,
 Modelo VARCHAR(45) NOT NULL,
 IP VARCHAR(45) NOT NULL,
-Modo_de_conexión VARCHAR(45) NOT NULL,
-Ubicación VARCHAR(45) NOT NULL,
+Modo_de_conexion VARCHAR(45) NOT NULL,
+Ubicacion VARCHAR(45) NOT NULL,
 PRIMARY KEY (Codigo),
 UNIQUE INDEX Codigo_UNIQUE (Codigo ASC))
 ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
@@ -49,14 +49,14 @@ ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 SET character_set_client = utf8mb4 ;
 -- -----------------------------------------------------
--- Table ESTACION . Variable_meteorológica 
+-- Table ESTACION . Variable_meteorologica 
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Variable_meteorológica`;
+DROP TABLE IF EXISTS `Variable_meteorologica`;
 /*!40101 SET @saved_cs_client = @@character_set_client */;
 SET character_set_client = utf8mb4 ;
-CREATE TABLE `Variable_meteorológica` (
+CREATE TABLE `Variable_meteorologica` (
 Codigo VARCHAR(45) NOT NULL,
-Descripción VARCHAR(45) NOT NULL,
+Descripcion VARCHAR(45) NOT NULL,
 Tipo VARCHAR(45) NOT NULL,
 PRIMARY KEY (Codigo))
 ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
@@ -72,18 +72,18 @@ DROP TABLE IF EXISTS ` Recoge_Sensor`;
 SET character_set_client = utf8mb4 ;
 CREATE TABLE ` Recoge_Sensor` (
 Sensores_Codigo VARCHAR(45) NOT NULL,
-Variable_meteorológica_Codigo VARCHAR(45) NOT NULL,
-PRIMARY KEY (Sensores_Codigo, Variable_meteorológica_Codigo),
+Variable_meteorologica_Codigo VARCHAR(45) NOT NULL,
+PRIMARY KEY (Sensores_Codigo, Variable_meteorologica_Codigo),
 INDEX fk_Recoge_Sensor_Sensores1_idx (Sensores_Codigo ASC),
-INDEX fk_Recoge_Sensor_Variable_meteorológica1_idx (Variable_meteorológica_Codigo ASC),
+INDEX fk_Recoge_Sensor_Variable_meteorologica1_idx (Variable_meteorologica_Codigo ASC),
 CONSTRAINT fk_Recoge_Sensor_Sensores1
 FOREIGN KEY (Sensores_Codigo)
 REFERENCES ESTACION.Sensores (Codigo)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION,
-CONSTRAINT fk_Recoge_Sensor_Variable_meteorológica1
-FOREIGN KEY (Variable_meteorológica_Codigo)
-REFERENCES ESTACION.Variable_meteorológica (Codigo)
+CONSTRAINT fk_Recoge_Sensor_Variable_meteorologica1
+FOREIGN KEY (Variable_meteorologica_Codigo)
+REFERENCES ESTACION.Variable_meteorologica (Codigo)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION)
 ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
@@ -127,21 +127,21 @@ DROP TABLE IF EXISTS `Mide_Sensor`;
 SET character_set_client = utf8mb4 ;
 CREATE TABLE `Mide_Sensor`(
 Sensores_Codigo VARCHAR(45) NOT NULL,
-Variable_meteorológica_Codigo VARCHAR(45) NOT NULL,
+Variable_meteorologica_Codigo VARCHAR(45) NOT NULL,
 Fecha VARCHAR(45) NOT NULL,
 Hora VARCHAR(45) NOT NULL,
 Valor VARCHAR(45) NOT NULL,
-PRIMARY KEY ( Sensores_Codigo , Variable_meteorológica_Codigo ),
-INDEX fk_Sensores_has_Variable_meteorológica_Variable_meteoroló_idx ( Variable_meteorológica_Codigo ASC),
-INDEX fk_Sensores_has_Variable_meteorológica_Sensores1_idx ( Sensores_Codigo ASC),
-CONSTRAINT fk_Sensores_has_Variable_meteorológica_Sensores1 
+PRIMARY KEY ( Sensores_Codigo , Variable_meteorologica_Codigo ),
+INDEX fk_Sensores_has_Variable_meteorologica_Variable_meteorolo_idx ( Variable_meteorologica_Codigo ASC),
+INDEX fk_Sensores_has_Variable_meteorologica_Sensores1_idx ( Sensores_Codigo ASC),
+CONSTRAINT fk_Sensores_has_Variable_meteorologica_Sensores1 
 FOREIGN KEY ( Sensores_Codigo )
 REFERENCES Sensores ( Codigo )
 ON DELETE NO ACTION
 ON UPDATE NO ACTION,
-CONSTRAINT fk_Sensores_has_Variable_meteorológica_Variable_meteorológi1 
-FOREIGN KEY ( Variable_meteorológica_Codigo )
-REFERENCES Variable_meteorológica ( Codigo )
+CONSTRAINT fk_Sensores_has_Variable_meteorologica_Variable_meteorologi1 
+FOREIGN KEY ( Variable_meteorologica_Codigo )
+REFERENCES Variable_meteorologica ( Codigo )
 ON DELETE NO ACTION
 ON UPDATE NO ACTION)
 ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

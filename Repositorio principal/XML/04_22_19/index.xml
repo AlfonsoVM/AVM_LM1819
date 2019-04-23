@@ -1,27 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="show_book.xsl"?>
 <!DOCTYPE catalog SYSTEM "catalog.dtd">
-<!--catalog última actualización 2010-11-01-->
+
+<!--
+- Crea un documento XML bien formado de un instituto que incluya estudiantes, profesores y trabajadores.
+- Crea un documento XML bien formado sobre una biblioteca. Debe contener atributos que permitan identificar el libro y que registren si están prestados o no.
+- Crea un documento XML bien formado que contenga elementos de 2 espacios de nombres distintos (librería y clientes). El xml debe registrar la compra de libros de un cliente
+-->
+
 <instituto>
     <estudiantes>
-        <dni></dni>
-        <nombre></nombre>
-        <apellido1></apellido1>
-        <apellido2></apellido2>
-        <curso></curso>
+        <alumno idA="1">
+            <dni>99999999X</dni>
+            <nombre>Alfonso</nombre>
+            <apellido1>Vargas</apellido1>
+            <apellido2>Mesa</apellido2>
+            <curso>1º ASIR</curso>
+        </alumno>
+        <alumno idA="2">
+            <dni>99999999Y</dni>
+            <nombre>Carlos</nombre>
+            <apellido1>Ramírez</apellido1>
+            <apellido2>Torres</apellido2>
+            <curso>2º ASIR</curso>
+        </alumno>
+        <alumno idA="3">
+            <dni>99999999Z</dni>
+            <nombre>Aitana</nombre>
+            <apellido1>López</apellido1>
+            <apellido2>Sierra</apellido2>
+            <curso>1º ASIR</curso>
+        </alumno>
     </estudiantes>
     <profesores>
-        <dni></dni>
-        <nombre></nombre>
-        <apellido1></apellido1>
-        <apellido2></apellido2>
-        <asignatura></asignatura>
+        <docente idP="1">
+            <dni>88888888X</dni>
+            <nombre>Francisco Javier</nombre>
+            <apellido1>Ruano</apellido1>
+            <apellido2>Vázquez</apellido2>
+            <asignatura>Lenguaje de Marcas</asignatura>
+        </docente>
+        <docente idP="2">
+            <dni>88888888Y</dni>
+            <nombre>Jaime</nombre>
+            <apellido1>Caraver</apellido1>
+            <apellido2>Castillo</apellido2>
+            <asignatura>Gestión de Base de Datos</asignatura>
+        </docente>
     </profesores>
     <trabajadores>
-        <dni></dni>
-        <nombre></nombre>
-        <apellido1></apellido1>
-        <apellido2></apellido2>
-        <trabajo></trabajo>
+        <empleado idE="1">
+            <dni>77777777X</dni>
+            <nombre>Alberto</nombre>
+            <apellido1>Idígoras</apellido1>
+            <apellido2>Sánchez</apellido2>
+            <trabajo>Carpíntero</trabajo>
+        </empleado>
+        <empleado idE="2">
+            <dni>77777777Y</dni>
+            <nombre>Lucía</nombre>
+            <apellido1>Murillo</apellido1>
+            <apellido2>Rivera</apellido2>
+            <trabajo>Secretaria</trabajo>
+        </empleado>
     </trabajadores>
 </instituto>
+
+<!--UwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwU-->
+
+<biblioteca>
+    <libro prestado="no" id="43">
+        <isbn>9788431680251</isbn>
+        <idioma>Castellano</idioma>
+        <titulo>Lazarillo de Tormes</titulo>
+        <autor>Anónimo</autor>
+        <NPaginas>144</Npaginas>
+        <editorial>VICENS-VIVES</editorial>
+        <encuadernacion>Tapa blanda</encuadernacion>
+        <AñoEdicion>2013</AñoEdicion>
+        <PlazaDeEdicion>Barcelona<PlazaDeEdicion>
+        <ilustrador>Jesus Gaban Bravo</ilustrador>
+    </libro>
+    <libro prestado="si" id="2">
+        <isbn>9788431615116</isbn>
+        <idioma>Castellano</idioma>
+        <titulo>La Celestina</titulo>
+        <autor>Fernando de Rojas</autor>
+        <NPaginas>256</Npaginas>
+        <editorial>VICENS-VIVES</editorial>
+        <encuadernacion>Tapa blanda</encuadernacion>
+        <AñoEdicion>2013</AñoEdicion>
+        <PlazaDeEdicion>Barcelona<PlazaDeEdicion>
+        <ilustrador>Francisco Sole Romero</ilustrador>
+        <ilustrador2>Antonio Rey Hazas</ilustrador2>
+    </libro>
+</biblioteca>
+
+<!--UwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwU-->
+
+<cliente    xmlns:cli='http://Espacio_de_nombres_XML/cliente'
+            xmlns:ped='http://Espacio_de_nombres_XML/pedido'>
+<cli:numero_ID>1232654</cli:numero_ID>
+<cli:nombre>Fulanito de Tal</cli:nombre>
+<cli:telefono>99999999</cli:telefono>
+<ped:pedido>
+<ped:numero_ID>6523213</ped:numero_ID>
+<ped:articulo>Caja de herramientas</ped:articulo>
+<ped:precio>187,90</ped:precio>
+</ped:pedido>
+</cli:cliente>

@@ -16,7 +16,7 @@ echo '<?xml version="1.0" enconding="iso-8859-1"?>';
     
     echo '<rss version="2.0">';
     echo '<channel>';
-    echo '<title> Noticies IES</title>';
+    echo '<title> Noticias IES</title>';
     echo '<link>https://webrssies.000webhostapp.com</link>';
     echo '<language>es</language>';
     echo '<description>Canal de noticies del IES</description>';

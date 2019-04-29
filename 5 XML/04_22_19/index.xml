@@ -2,11 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="show_book.xsl"?>
 <!DOCTYPE catalog SYSTEM "catalog.dtd">
 
-<!--
-- Crea un documento XML bien formado de un instituto que incluya estudiantes, profesores y trabajadores.
-- Crea un documento XML bien formado sobre una biblioteca. Debe contener atributos que permitan identificar el libro y que registren si están prestados o no.
-- Crea un documento XML bien formado que contenga elementos de 2 espacios de nombres distintos (librería y clientes). El xml debe registrar la compra de libros de un cliente
--->
+<!--Crea un documento XML bien formado de un instituto que incluya estudiantes, profesores y trabajadores-->
 
 <instituto>
     <estudiantes>
@@ -66,7 +62,7 @@
     </trabajadores>
 </instituto>
 
-<!--UwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwU-->
+<!--Crea un documento XML bien formado sobre una biblioteca. Debe contener atributos que permitan identificar el libro y que registren si están prestados o no-->
 
 <biblioteca>
     <libro prestado="no" id="43">
@@ -91,22 +87,24 @@
         <encuadernacion>Tapa blanda</encuadernacion>
         <AñoEdicion>2013</AñoEdicion>
         <PlazaDeEdicion>Barcelona<PlazaDeEdicion>
-        <ilustrador>Francisco Sole Romero</ilustrador>
-        <ilustrador2>Antonio Rey Hazas</ilustrador2>
+        <ilustrador id="1">Francisco Sole Romero</ilustrador>
+        <ilustrador id="2">Antonio Rey Hazas</ilustrador2>
     </libro>
 </biblioteca>
 
-<!--UwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwUUwU-->
+<!--Crea un documento XML bien formado que contenga elementos de 2 espacios de nombres distintos (librería y clientes). El xml debe registrar la compra de libros de un cliente-->
 
 <cliente    xmlns:cli='http://Espacio_de_nombres_XML/cliente'
-            xmlns:ped='http://Espacio_de_nombres_XML/pedido'>
+            xmlns:lib='http://Espacio_de_nombres_XML/pedido'>
 
     <cli:numero_ID>1232654</cli:numero_ID>
     <cli:nombre>Fulanito de Tal</cli:nombre>
-    <cli:telefono>99999999</cli:telefono>
-    <ped:pedido>
-        <ped:numero_ID>6523213</ped:numero_ID>
-        <ped:articulo>Caja de herramientas</ped:articulo>
-        <ped:precio>187,90</ped:precio>
-    </ped:pedido>
+    <cli:telefono>999999999</cli:telefono>
+    <lib:prestamo>
+        <lib:numero_ID>2</lib:numero_ID>
+        <lib:titulo>La Celestina</lib:titulo>
+        <lib:inicio_prestamo>22/04/19</lib:fecha_prestamo>
+        <lib:tiempo>30 días</lib:tiempo>
+        <lib_final_prestamo>22/05/19</lib_final_prestamo>
+    </lib:prestamo>
 </cli:cliente>

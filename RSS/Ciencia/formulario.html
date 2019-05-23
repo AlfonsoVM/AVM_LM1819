@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ciencia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form method="POST" action="insert.php">
+        <p>
+            <label for="cientifico">Científico: </label>
+            <input type="text" name="cientifico" id="cientifico" required>
+        </p>
+        <p>
+            <label for="investigacion">Investigación: </label>
+            <input type="text" name="investigacion" id="investigacion" required>
+        </p>
+        <p>
+            <label for="resultados">Resultados: </label>
+            <input type="number" name="resultados" id="resultados" required>
+        </p>
+        <p>
+            <label for="descripcion">Descripción: </label>
+            <textarea name="descripcion" id="descripcion" rows="10" cols="50"></textarea>
+        </p>
+        <p>
+            <label for="fecha">Fecha: </label>
+            <input type="date" name="fecha" id="fecha" required>
+        </p>
+        <p>
+            <input type="submit" value="Añadir">
+        </p>
+    </form>
+</body>
+</html>

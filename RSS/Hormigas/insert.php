@@ -9,7 +9,7 @@ $conexion = mysqli_connect("localhost", "root", "", "hormigas")
     or die("Problemas en la conexion");
 
 mysqli_query($conexion, "INSERT INTO hormigas(tipo,nombre,color,descripcion, fecha) 
-    VALUES ('$tipo','$nombre',$color,'$descripcion','$fecha')")
+    VALUES ('$tipo','$nombre','$color','$descripcion','$fecha')")
     or die("Problemas en el insert ".mysqli_error($conexion));
 
 mysqli_close($conexion);
